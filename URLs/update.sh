@@ -1,7 +1,14 @@
 
+while true
+
+do
+
 python3 make_index.py --dir .
 git add .
-git commit -m "chore:" 
+date | awk '{print $4}' | xargs git commit -m
 git push
 
-watch --interval=3600 command
+sleep 3600
+
+done
+
